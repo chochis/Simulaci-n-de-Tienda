@@ -16,7 +16,7 @@ Para instalar y ejecutar este proyecto localmente, sigue estos pasos:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/usuario/mi-tienda-virtual.git
+   git clone [https://github.com/chochis/Simulaci-n-de-Tienda.git]
 2. Navega a la carpeta del proyecto:
    cd fakestore
 3. Instala las dependencias:
