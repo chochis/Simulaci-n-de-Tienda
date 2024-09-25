@@ -1,10 +1,8 @@
 <template>
     <div class="container my-4">
-        <!-- Título de la tienda con ícono -->
+
     <div class="d-flex align-items-center justify-content-center mb-4">
-        <!-- Icono de Bootstrap o Font Awesome -->
-        <i class="bi bi-shop-window me-2" style="font-size: 2rem;"></i> <!-- Bootstrap Icon -->
-        <!-- <i class="fas fa-store me-2" style="font-size: 2rem;"></i> --> <!-- Font Awesome Icon (alternativa) -->
+        <i class="bi bi-shop-window me-2" style="font-size: 2rem;"></i>
         <h1 class="display-4 fw-bold">Mi tienda Virtual</h1>
     </div>
     <!-- Mensaje de carga -->
@@ -54,7 +52,7 @@
     </div>
     <!-- Modal para detalles del producto -->
     <div v-if="selectedProduct" class="modal fade show" tabindex="-1" style="display: block;" aria-modal="true">
-    <div class="modal-dialog modal-lg"> <!-- Cambiado a modal-lg para hacerlo más amplio -->
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title">{{ selectedProduct.title }}</h5>
@@ -95,12 +93,12 @@ export default {
         itemsPerPage: 8,
         allLoaded: false,
         selectedProduct: null,
-        loading: true, // Estado de carga
+        loading: true,
     };
     },
     methods: {
     async fetchProducts() {
-        this.loading = true; // Activar el estado de carga
+        this.loading = true;
         try {
         const response = await fetch(`https://fakestoreapi.com/products`);
         if (!response.ok) throw new Error("Error al cargar los productos");
@@ -111,7 +109,7 @@ export default {
         console.error("Error fetching products:", error);
         alert("No se pudieron cargar los productos. Intenta de nuevo más tarde.");
         } finally {
-          this.loading = false; // Desactivar el estado de carga
+            this.loading = false;
         }
     },
     filterProducts() {
@@ -153,7 +151,7 @@ export default {
 
 /* Estilos adicionales para el título */
 h1 {
-    color: white; /* Color del texto */
+    color: white;
     text-shadow:
     -1px -1px 0 black,
     1px -1px 0 black,
@@ -162,12 +160,12 @@ h1 {
 }
 
 .bi-shop-window, .fas {
-  color: #e5e5e6; /* Color primario */
+    color: #e5e5e6;
 }
 /* Tamaño y ajustes de la imagen */
 .card-img-top {
 height: 200px;
-  object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
+    object-fit: contain;
 }
 
 /* Espaciado uniforme entre las tarjetas */
@@ -177,10 +175,9 @@ transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-12px); /* Efecto de elevación en hover */
+    transform: translateY(-12px);
 }
 
-/* Agregar sombra a las tarjetas */
 .card-body {
 display: flex;
 flex-direction: column;
@@ -192,32 +189,30 @@ padding: 1rem;
 }
 /* Estilos del modal */
 .modal-dialog {
-  max-width: 800px; /* Hace el modal más ancho */
+    max-width: 800px;
 }
 
 .modal-body {
-  max-height: 70vh; /* Limita la altura del cuerpo del modal */
-  overflow-y: auto; /* Permite hacer scroll si el contenido es muy largo */
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
 .modal-content {
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo de la imagen dentro del modal */
 .modal-body img {
-    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+    object-fit: cover;
     border-radius: 5px;
 }
 
-/* Estilos de transición */
 .modal.fade {
-  transition: opacity 0.3s ease-in-out; /* Transición suave para el modal */
+    transition: opacity 0.3s ease-in-out;
 }
 
 .modal-header, .modal-footer {
-  background-color: #f8f9fa; /* Colores más suaves */
+    background-color: #f8f9fa;
 }
 
 .modal-title {

@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5 {
   font-family: 'Playfair Display', serif;
 }
 
-/* Estilo de fondo con imagen y degradado */
+
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/fake store/fakestore/src/assets/fondo2.png');
   background-size: cover;
